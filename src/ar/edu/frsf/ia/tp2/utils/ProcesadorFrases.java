@@ -1,4 +1,4 @@
-package ar.edu.frsf.ia.tp2;
+package ar.edu.frsf.ia.tp2.utils;
 
 import java.util.ArrayList;
 

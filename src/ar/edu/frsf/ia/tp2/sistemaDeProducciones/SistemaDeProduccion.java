@@ -1,8 +1,9 @@
-package ar.edu.frsf.ia.tp2;
+package ar.edu.frsf.ia.tp2.sistemaDeProducciones;
 
 import java.util.ArrayList;
 
 import ar.edu.frsf.ia.tp2.criterios.Criterio;
+import ar.edu.frsf.ia.tp2.utils.Frase;
 
 public class SistemaDeProduccion {
 	ArrayList<Regla> memoriaProducciones;
@@ -30,6 +31,10 @@ public class SistemaDeProduccion {
 		
 		log("Frase ingresada: " + fraseCompleta);
 		log("Palabras clave: " + frase.getPalabras());
+		log("Criterios: " + criterios);
+		log("\nReglas:");
+		for(Regla r : memoriaProducciones)
+			log(r);
 			
 		while(true){
 			log("\nIteracion " + iteracion);
@@ -65,7 +70,8 @@ public class SistemaDeProduccion {
 			lista = criterio.filtrar(memoriaTrabajo, lista);
 			
 			log("\nAplicando criterio ["+criterio+"]. Conjunto resultante:");
-			log(lista);
+			for(Match m : lista)
+				log(m);
 			
 			if(lista.size() <= 1)
 				break;

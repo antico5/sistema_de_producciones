@@ -2,9 +2,9 @@ package ar.edu.frsf.ia.tp2.criterios;
 
 import java.util.ArrayList;
 
-import ar.edu.frsf.ia.tp2.Accion;
-import ar.edu.frsf.ia.tp2.Match;
-import ar.edu.frsf.ia.tp2.Regla;
+import ar.edu.frsf.ia.tp2.sistemaDeProducciones.Accion;
+import ar.edu.frsf.ia.tp2.sistemaDeProducciones.Match;
+import ar.edu.frsf.ia.tp2.sistemaDeProducciones.Regla;
 
 public class Prioridad extends Criterio {
 

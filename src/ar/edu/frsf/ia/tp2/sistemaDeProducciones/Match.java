@@ -1,4 +1,6 @@
-package ar.edu.frsf.ia.tp2;
+package ar.edu.frsf.ia.tp2.sistemaDeProducciones;
+
+import ar.edu.frsf.ia.tp2.utils.Frase;
 
 public class Match {
 	Regla regla;

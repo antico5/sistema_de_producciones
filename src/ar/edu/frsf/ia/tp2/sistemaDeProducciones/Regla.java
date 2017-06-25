@@ -1,18 +1,25 @@
-package ar.edu.frsf.ia.tp2;
+package ar.edu.frsf.ia.tp2.sistemaDeProducciones;
 
 import java.util.Arrays;
 
+import ar.edu.frsf.ia.tp2.utils.Frase;
+
 
 public class Regla {
+	private static int numeroRegla = 1;
+	
 	String[] palabrasClave;
 	Accion accionTomada;
 	int prioridad;
 	int especificidad;
+	String identificador;
 	
 	public Regla(String[] strings, Accion accion){
 		this.palabrasClave=strings;
 		this.accionTomada = accion;
 		this.especificidad = strings.length;
+		this.identificador = "R"+numeroRegla;
+		numeroRegla++;
 	}
 	
 	public Regla(int prioridad, String[] strings, Accion accion){
@@ -51,7 +58,7 @@ public class Regla {
 
 	@Override
 	public String toString() {
-		return "[palabrasClave=" + Arrays.toString(palabrasClave)
+		return " ("+identificador+ ")"+ ":[palabrasClave=" + Arrays.toString(palabrasClave)
 				+ ", accionTomada=[" + accionTomada + "], prioridad=" + prioridad
 				+ ", especificidad=" + especificidad + "]";
 	}
